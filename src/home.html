@@ -1,0 +1,396 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/tailwind.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!--  Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script>
+        // Grab HTML Elements
+        const btn = document.querySelector("button.mobile-menu");
+        const menu = document.querySelector("#mobile-menu");
+
+        // Add Event Listeners
+        if (btn) {
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 99999; animation-duration: 0.60s; animation-timing-function: ease-out;">
+        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5" style="background: #272727;">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="#" class="flex items-center">
+                    <!--  <img src="/src/img/Logo.png" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" /> -->
+                    <span style="font-family: 'Lora', serif; font-size: 30px; font-weight: 700; color: #6aaf08;">Gardener</span>
+                    <img src="/src/img/title-logo.png" alt="" style="width: 40px; height: 30px;">
+                </a>
+                <button data-collapse-toggle="mobile-menu" type="button" class="mobile-menu inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="mobile-menu-2" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+                <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                        <li>
+                            <a href="#home" class="block py-2 pr-4 pl-3 text-white bg-white-700 rounded md:bg-transparent md:text-green-300 md:p-0 dark:text-white" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-300 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Über</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-300 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Dienstleistungen</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-300 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projekte</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div class="bg-emerald-50 lg:px-20 lg:py-20 px-8 pt-20" id="home">
+        <div class="lg:grid lg:grid-cols-3">
+            <div class="col-span-2">
+                <div class="lg:py-4 md:py-4 lg:text-4xl text-xl md:text-3xl font-sans font-bold">
+                    <p style="color: #09425A;">Willkommen bei Denis Veseli -Gartendienste- </p>
+                </div>
+                <div class="lg:py-8 py-4 text-sm lg:text-xl" style="color: #09425A;">Wir bieten laufende Grundstückspflege an, die Rasenmähen, Düngen, Frühjahrs- und Herbstreinigung, Vertikutieren, Belüften, Säen, Mulchen, Kantenschneiden, Beschneiden sowie Baumpflege und -entfernung umfasst. Wir bieten auch die Planung
+                    und Installation vieler Landschaftsbauprojekte an, darunter Gehwege, Stufen, Stützmauern, Terrassen, Bepflanzung, Umpflanzung, Entwässerungssysteme, Rasensanierung und -installation. </div>
+
+                <div class="flex inline-flex ">
+                    <div>
+                        <button type="button " class="text-white  hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800
+                        " style="background-color:#6aaf08;"><a href="mailto:veselidenis19@gmail.com ">Kontaktiere uns</a></button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="lg:pl-32 ">
+                <img src="/src/img/gardener.jpg " alt=" " class="w-60 h-80 ">
+            </div>
+        </div>
+        <!-- Services -->
+        <div class="lg:pt-20 lg:pb-10 pt-10" id="services">
+            <div>
+                <p class="lg:text-4xl text-xl text-center font-sans font-bold " style="color: #09425A;">Was wir anbieten</p>
+            </div>
+            <div class="lg:mt-12 mt-6 grid grid-cols-1 gap-y-6 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 ">
+                <div class="flex justify-center">
+                    <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                        <div class="py-3 px-6 border-b border-gray-300">
+                            <i class="fa fa-pagelines text-green-500 " aria-hidden="true "></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class=" text-md lg:text-xl font-medium mb-2" style="color: #151875;">Planen Sie Ihren Garten </h5>
+                            <p class=" text-sm lg:text-base mb-4 " style="color: rgba(26, 11, 91, 0.3); ">
+                                Erweitern Sie Ihr Zuhause mit einem schönen Garten Indem Sie eine Umgebung im Freien schaffen, bauen Sie im Wesentlichen Räume, die funktional, einzigartig und unterhaltsam sind.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                        <div class="py-3 px-6 border-b border-gray-300">
+                            <i class="fa fa-tree text-green-500 " aria-hidden="true "></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class=" text-md lg:text-xl font-medium mb-2" style="color: #151875;">Landschaft gestalten</h5>
+                            <p class=" text-sm lg:text-base mb-4 " style="color: rgba(26, 11, 91, 0.3); ">
+                                Wir bieten Landschaftspflege an. Landschaftspflege ist mehr als nur das Pflanzen von ein paar Bäumen und Sträuchern rund um Ihr Grundstück.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                        <div class="py-3 px-6 border-b border-gray-300">
+                            <i class="fa fa-leaf text-green-500 " aria-hidden="true "></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="text-md lg:text-xl font-medium mb-2" style="color: #151875;">Einfahrt und Rasen</h5>
+                            <p class=" text-sm lg:text-base mb-4 " style="color: rgba(26, 11, 91, 0.3); ">
+                                Rasen ist nicht teuer zu bepflanzen. Genügend Grassamen, um Ihr Eigentum zu bedecken, ist weit weniger teuer als exotische Pflanzen oder andere Merkmale. Rasenflächen benötigen jedoch eine sorgfältige Pflege und viel Wasser.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Projects -->
+        <div class="pt-32" id="projects">
+            <div class="pb-20">
+                <p class="lg:text-4xl text-3xl text-center font-sans font-bold " style="color: #09425A;">Letzte Projekte</p>
+            </div>
+
+            <div class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
+                <div class="w-full rounded">
+                    <img src="/src/img/WhatsApp Image 2022-03-06 at 11.38.17.jpeg" class="hover:scale-110 transition duration-300 ease-in-out" alt="">
+                </div>
+                <div class="w-full rounded">
+                    <img src="/src/img/photo2.jpeg" alt=""></div>
+                <div class="w-full rounded">
+                    <img src="/src/img/imgStone.jpeg" alt="" style="width: 1024px; height: 336px;"> </div>
+
+                <div class="w-full rounded">
+                    <img src="/src/img/photo5.jpeg" alt="" style="width: 1024px; height: 336px;"> </div>
+                <div class="w-full rounded">
+                    <img src="/src/img/photo6.jpeg" alt=""> </div>
+                <div class="w-full rounded">
+                    <img src="/src/img/photo3.jpeg" alt="" style="width: 1024px; height: 336px;"> </div>
+            </div>
+        </div>
+        <!--testimonial-->
+        <div class="testimonial pt-32">
+            <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto mb-6">
+                <div class="">
+                    <h3 style="font-family: 'Lora', serif; font-size: 36px; font-weight: 700;"><span style="color: #6aaf08; ">Kunden </span> Bewertungen</h3>
+                </div>
+
+                <h3 style="font-family: 'Lora', serif;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 34px;
+                    margin-top: 4px;
+                    color: #9e9e9e;
+                    letter-spacing: 0.2px;">
+                    Lesen Sie, was meine Kunden über unseren Landschaftsbau sagen <br> und den Erfolg, den sie erzielt haben.
+                </h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                    <div class="block rounded-lg shadow-lg bg-white">
+                        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #9d789b;"></div>
+                        <div class="p-6">
+                            <h4 class="text-2xl font-semibold mb-4">Maria Smantha</h4>
+                            <hr />
+                            <p class="mt-4">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+                        </svg> Erstaunliches Design und Installation unseres schönen neuen Gartens. Gärtner ist professionell, kreativ und sachkundig. Unser Designer Denis war geduldig, fit und erfahren.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="block rounded-lg shadow-lg bg-white">
+                        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #7a81a8;"></div>
+                        <div class="p-6">
+                            <h4 class="text-2xl font-semibold mb-4">Lisa Cudrow</h4>
+                            <hr />
+                            <p class="mt-4">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+                        </svg> Denis hat mit mir zusammengearbeitet, um mein Konzept vom Design in die Realität umzusetzen – und mir eine sehr geschätzte Anleitung gegeben, was eine schlechte Idee meinerseits gewesen sein
+                                könnte
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="block rounded-lg shadow-lg bg-white">
+                        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #6d5b98;"></div>
+
+                        <div class="p-6">
+                            <h4 class="text-2xl font-semibold mb-4">John Smith</h4>
+                            <hr />
+                            <p class="mt-4">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+                        </svg> Denis war geduldig, zuvorkommend und erfahren. Während wir die Installation durcharbeiteten, hörte er uns zu und nahm oft spontan Änderungen vor.
+                                <br> Danke
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- kontakt form -->
+        <div class="pt-32" id="contact">
+            <div class="">
+                <p class="lg:text-4xl text-3xl text-center font-sans font-bold " style="color: #09425A;">Kontaktiere uns</p>
+            </div>
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-40 lg:pt-20 pt-10 lg:pb-40 pb-20">
+                <div>
+                    <h3 class="font-bold pb-5 lg:text-xl text-base" style="color: #09425A;">Informationen über uns</h3>
+                    <h3 class="lg:pb-10 text-sm lg:text-base text-sm" style="color: #09425A;">Wir kümmern uns darum, Ihrem Garten das Lächeln zurückzugeben, <br> indem wir ihn durch die von uns angebotenen Dienstleistungen auf <br> die professionellste und ästhetischste Weise behandeln. quam.
+                    </h3>
+                    <div class="flex flex-inline items-center">
+                        <i class="fa fa-circle text-blue-900 pr-3"></i>
+                        <div class="grid grid-rows-1">
+                            <h3 class="lg:text-base text-sm " style="color: #09425A;"><a href="tel:+49 1511 7309500">Cel: +49 1511 7309500</a></h3>
+                            <h3 class="lg:text-base text-sm " style="color: #09425A;"><a href="mailto:veselidenis19@gmail.com ">E-Mail: veselidenis19@gmail.com</a></h3>
+                        </div>
+                    </div>
+                    <div class="flex flex-inline items-center pt-4 pb-6">
+                        <i class="fa fa-circle text-green-500 pr-3"></i>
+                        <div class="grid grid-rows-1">
+                            <h3 class="lg:text-base text-sm " style="color: #09425A;">Nickel stasse 7 heilbronn 74074</h3>
+
+                        </div>
+                    </div>
+                    <div class="pt-10 lg:pt-0">
+
+                        <i class="fa fa-leaf text-green-500 pr-3"></i>
+                        <i class="fa fa-tree text-green-500 pr-3"></i>
+                        <i class="fa fa-pagelines text-green-500 pr-3"></i>
+                    </div>
+                </div>
+
+
+
+                <div class="invisible lg:visible">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.826926952199!2d9.217440615683936!3d49.127922079314786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x320118d7d9a2d217!2zNDnCsDA3JzQwLjUiTiA5wrAxMycxMC43IkU!5e0!3m2!1sen!2s!4v1646564045284!5m2!1sen!2s"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <div>
+        <footer class="text-center lg:text-left" style="color: #fff; background: url(/src/img/bg-photot.jpg) repeat center; background-color: #1e1e1e; background-attachment: fixed;">
+            <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300 ">
+                <div class="mr-12 hidden lg:block ">
+                    <span>Verbinden Sie sich mit uns in sozialen Netzwerken: </span>
+                </div>
+                <div class="flex justify-center ">
+                    <a href="https://www.facebook.com/denis.veseli.12 " class="mr-6 text-white">
+                        <svg aria-hidden="true " focusable="false " data-prefix="fab " data-icon="facebook-f " class="w-2.5 " role="img " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 320 512 ">
+                    <path fill="currentColor "
+                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z ">
+                    </path>
+                  </svg>
+                    </a>
+                    <a href="#! " class="mr-6 text-white ">
+                        <svg aria-hidden="true " focusable="false " data-prefix="fab " data-icon="google " class="w-3.5 " role="img " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 488 512 ">
+                    <path fill="currentColor "
+                      d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3
+            12.7 3.9 24.9 3.9 41.4z ">
+                    </path>
+                  </svg>
+                    </a>
+                    <a href="https://www.instagram.com/denis.veseli/ " class="mr-6 text-white ">
+                        <svg aria-hidden="true " focusable="false " data-prefix="fab " data-icon="instagram " class="w-3.5 " role="img " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 448 512 ">
+                    <path fill="currentColor "
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12
+            26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7
+            35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7
+            9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z ">
+                    </path>
+                  </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mx-6 py-10 text-center md:text-left ">
+                <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+                    <div class=" ">
+                        <h6 class=" uppercase font-semibold mb-4 flex items-center justify-center md:justify-start " style="font-weight: 700; font-family: 'Lora', serif; color: #6aaf08;">
+                            <img src="/src/img/Logo.png " class="mr-3 h-6 sm:h-10 " style="width: 80px; height:76px " alt="Flowbite Logo " /></i> Gardener
+                        </h6>
+                        <p style="color: #9e9e9e;"> Gärtner bieten das Design und die Installation vieler Landschaftsbauprojekte an, darunter Gehwege, Stufen, Stützmauern, Terrassen, Bepflanzung, Renovierung und Installation von Rasenflächen.</p>
+                    </div>
+                    <div class=" ">
+                        <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start" style="font-weight: 700; font-family: 'Lora', serif; font-size: 24px;">
+                            Menu
+                        </h6>
+                        <p class="mb-4 ">
+                            <a href="#home " style="color: #9e9e9e;">Home</a>
+                        </p>
+                        <p class="mb-4 ">
+                            <a href="#contact " style="color: #9e9e9e;">Kontakt</a>
+                        </p>
+                        <p class="mb-4 ">
+                            <a href="#services " style="color: #9e9e9e;">Dienstleistungen</a>
+                        </p>
+                        <p>
+                            <a href="#projects " style="color: #9e9e9e;">Projekte</a>
+                        </p>
+                    </div>
+                    <div class=" ">
+                        <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start " style="font-weight: 700; font-family: 'Lora', serif; font-size: 24px;">
+                            Services
+                        </h6>
+                        <p class="mb-4 ">
+                            <a href="#! " style="color: #9e9e9e;">Zaunbau</a>
+                        </p>
+                        <p class="mb-4 ">
+                            <a href="#! " style="color: #9e9e9e;">Heckenschnitt</a>
+                        </p>
+                        <p class="mb-4 ">
+                            <a href="#! " style="color: #9e9e9e;">Pflanzungen</a>
+                        </p>
+                        <p class="mb-4 ">
+                            <a href="#! " style="color: #9e9e9e;">Baumfällabeiten</a>
+                        </p>
+
+                    </div>
+                    <div class=" ">
+                        <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start " style="font-weight: 700; font-family: 'Lora', serif; font-size: 24px;">
+                            Services
+                        </h6>
+                        <p class="mb-4 ">
+                            <a href="#! " style="color: #9e9e9e;">Natürsteine</a>
+                        </p>
+                        <p class="mb-4 ">
+                            <a href="#! " style="color: #9e9e9e;">Gartenpflege</a>
+                        </p>
+                        <p class="mb-4 ">
+                            <a href="#! " style="color: #9e9e9e;">Baumschnitt</a>
+                        </p>
+                        <p class="mb-4 ">
+                            <a href="#! " style="color: #9e9e9e;">Pflasterarbeiten</a>
+                        </p>
+                    </div>
+                    <div class=" ">
+                        <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start " style="font-weight: 700; font-family: 'Lora', serif; font-size: 24px;">
+                            Kontakt
+                        </h6>
+                        <a class="flex items-center justify-center md:justify-start mb-4 " style="color: #9e9e9e;">
+                            <svg aria-hidden="true " focusable="false " data-prefix="fas " data-icon="home " class="w-6 mr-4 " role="img " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 576 512 ">
+                      <path fill="currentColor "
+                        d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6
+            251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12
+            0 0 0-1.7-16.93z ">
+                      </path>
+                    </svg> Nickel stasse 7 heilbronn 74074, Germany
+                        </a>
+                        <a class="flex items-center justify-center md:justify-start mb-4 " href="mailto:veselidenis19@gmail.com " style="color: #9e9e9e;">
+                            <svg aria-hidden="true " focusable="false " data-prefix="fas " data-icon="envelope " class="w-4 mr-4 " role="img " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 512 512 ">
+                      <path fill="currentColor "
+                        d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256
+            320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z ">
+                      </path>
+                    </svg> veselidenis19@gmail.com
+                        </a>
+                        <a class="flex items-center justify-center md:justify-start mb-4 " href="tel:+49 1511 7309500 " style="color: #9e9e9e;">
+                            <svg aria-hidden="true " focusable="false " data-prefix="fas " data-icon="phone " class="w-4 mr-4 " role="img " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 512 512 ">
+                      <path fill="currentColor "
+                        d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512
+            48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z ">
+                      </path>
+                    </svg> +49 1511 7309500
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
