@@ -9,18 +9,7 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!--  Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script>
-        // Grab HTML Elements
-        const btn = document.querySelector("button.mobile-menu");
-        const menu = document.querySelector("#mobile-menu");
 
-        // Add Event Listeners
-        if (btn) {
-            btn.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-            });
-        }
-    </script>
 </head>
 
 <body>
@@ -41,7 +30,7 @@
                 <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
                     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                         <li>
-                            <a href="#home" class="block py-2 pr-4 pl-3 text-white bg-white-700 rounded md:bg-transparent md:text-green-300 md:p-0 dark:text-white" aria-current="page">Home</a>
+                            <a href="#home" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 bg-white-700 rounded md:bg-transparent md:text-green-300 md:p-0 dark:text-white" aria-current="page">Home</a>
                         </li>
                         <li>
                             <a href="#contact" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-300 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Über</a>
@@ -394,6 +383,18 @@
             </div>
         </footer>
     </div>
+    <script>
+        // Grab HTML Elements
+        const btn = document.querySelector("button.mobile-menu");
+        const menu = document.querySelector("#mobile-menu");
+
+        // Add Event Listeners
+        if (btn) {
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        }
+    </script>
 </body>
 
 </html>
