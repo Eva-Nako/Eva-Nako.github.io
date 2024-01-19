@@ -129,26 +129,30 @@
             <div class="pb-20">
                 <p class="lg:text-4xl text-3xl text-center font-sans font-bold " style="color: #09425A;">Letzte Projekte</p>
             </div>
-
-            <div class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
-                <div class="w-full rounded">
-                    <img src="/src/img/WhatsApp Image 2022-03-06 at 11.38.17-min.jpeg" class="hover:scale-110 transition duration-300 ease-in-out" alt="">
+            <div class="carousel relative overflow-hidden">
+            <div class="carousel-inner flex transition-transform duration-300 ease-in-out container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
+                <div class="w-full rounded carousels-items flex-shrink-0">
+                    <img src="/src/img/WhatsApp Image 2022-03-06 at 11.38.17-min.jpeg" class="w-full hover:scale-110 transition duration-300 ease-in-out" alt="">
                 </div>
-                <div class="w-full rounded">
+                <div class="w-full rounded carousels-items flex-shrink-0">
                     <img src="/src/img/photo2-min.jpeg" alt=""></div>
-                <div class="w-full rounded">
-                    <img src="/src/img/imgStone-min.jpeg" alt="" style="width: 1024px; height: 336px;"> </div>
+                <div class="w-full rounded carousels-items flex-shrink-0">
+                    <img src="/src/img/imgStone-min.jpeg" alt="" class="w-full" style="width: 1024px; height: 336px;"> </div>
 
-                <div class="w-full rounded">
-                    <img src="/src/img/photo5-min.jpeg" alt="" style="width: 1024px; height: 336px;"> </div>
-                <div class="w-full rounded">
-                    <img src="/src/img/photo6-min.jpeg" alt=""> </div>
-                <div class="w-full rounded">
-                    <img src="/src/img/photo3-min.jpeg" alt="" style="width: 1024px; height: 336px;"> </div>
+                <div class="w-full rounded carousels-items flex-shrink-0">
+                    <img src="/src/img/photo5-min.jpeg" alt="" class="w-full" style="width: 1024px; height: 336px;"> </div>
+                <div class="w-full rounded carousels-items flex-shrink-0">
+                    <img src="/src/img/photo6-min.jpeg" alt="" class="w-full"> </div>
+                <div class="w-full rounded carousels-items flex-shrink-0">
+                    <img src="/src/img/photo3-min.jpeg" alt="" class="w-full" style="width: 1024px; height: 336px;"> </div>
             </div>
+            <!-- Navigation buttons -->
+            <button class="carousel-prev text-xl absolute top-1/2 transform -translate-y-1/2 left-4 bg-white bg-opacity-80 px-2 py-1 rounded md:hidden lg:hidden">&#8592;</button>
+            <button class="carousel-next text-xl absolute top-1/2 transform -translate-y-1/2 right-4 bg-white bg-opacity-80 px-2 py-1 rounded md:hidden lg:hidden">&#8594;</button>
+        </div>
         </div>
         <!--testimonial-->
-        <div class="testimonial carousel w-full overflow-hidden md:hidden pt-32">
+        <div class="testimonial carousel w-full overflow-hidden pt-32">
             <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto mb-6">
                 <div class="">
                     <h3 style="font-family: 'Lora', serif; font-size: 36px; font-weight: 700;"><span style="color: #6aaf08; ">Kunden </span> Bewertungen</h3>
@@ -166,7 +170,7 @@
             </div>
             <div class="grid md:grid-cols-3 gap-6 text-center">
                 <div>
-                    <div class="carousel-item md:hidden block rounded-lg shadow-lg bg-white">
+                    <div class="carousel-item block rounded-lg shadow-lg bg-white">
                         <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #9d789b;"></div>
                             <div class="p-6">
                                     <h4 class="text-2xl font-semibold mb-4">Maria Smantha</h4>
@@ -179,7 +183,7 @@
                             </div>
                        </div>
                    </div>
-                    <div class="carousel-item md:hidden">
+                    <div class="carousel-item">
                         <div class="block rounded-lg shadow-lg bg-white">
                             <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #7a81a8;"></div>
                             <div class="p-6">
@@ -195,7 +199,7 @@
                         </div>
                     </div>
                 
-                    <div class="carousel-item md:hidden block rounded-lg shadow-lg bg-white">
+                    <div class="carousel-item block rounded-lg shadow-lg bg-white">
                         <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #6d5b98;"></div>
 
                         <div class="p-6">
@@ -416,6 +420,37 @@
         }
 
         setInterval(changeItem, 3500); // Change every 3.5 seconds
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+  const carouselInner = document.querySelector(".carousel-inner");
+  const prevButton = document.querySelector(".carousel-prev");
+  const nextButton = document.querySelector(".carousel-next");
+
+  if (carouselInner && prevButton && nextButton) {
+    let currentIndex = 0;
+    const totalItems = document.querySelectorAll(".carousels-items").length;
+
+    prevButton.addEventListener("click", function () {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    nextButton.addEventListener("click", function () {
+      if (currentIndex < totalItems - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    function updateCarousel() {
+      const translateXValue = -currentIndex * 100 + "%";
+      carouselInner.style.transform = "translateX(" + translateXValue + ")";
+    }
+  }
+});
 
     </script>
 </body>
